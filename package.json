@@ -1,0 +1,23 @@
+{
+    "name": "mmm-auroraforecast",
+    "version": "1.0.0",
+    "description": "MagicMirror² module that gets the Aurora forecast from NOAA",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/damithsj/MMM-AuroraForecast"
+    },
+    "keywords": [
+        "magicmirror",
+        "aurora"
+      ],
+    "main": "MMM-AuroraForecast.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Damith Jinasena",
+    "license": "MIT",
+    "dependencies": {
+        "moment": "^2.28.0",
+        "needle": "^2.5.2"
+    }
+}
