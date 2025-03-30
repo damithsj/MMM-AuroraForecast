@@ -30,7 +30,7 @@ Module.register("MMM-AuroraForecast", {
    */
   socketNotificationReceived: function (notification, payload) {
     if (notification === "EXAMPLE_NOTIFICATION") {
-      this.templateContent = '${this.config.exampleContent} ${payload.text}'
+      this.templateContent = `${this.config.exampleContent} ${payload.text}`
       this.updateDom()
     }
   },
@@ -40,7 +40,7 @@ Module.register("MMM-AuroraForecast", {
    */
   getDom() {
     const wrapper = document.createElement("div")
-    wrapper.innerHTML = '<b>Title</b><br />${this.templateContent}'
+    wrapper.innerHTML = `<b>Title</b><br />${this.templateContent}`
 
     return wrapper
   },
@@ -57,7 +57,7 @@ Module.register("MMM-AuroraForecast", {
    */
   notificationReceived(notification, payload) {
     if (notification === "TEMPLATE_RANDOM_TEXT") {
-      this.templateContent = '${this.config.exampleContent} ${payload}'
+      this.templateContent = `${this.config.exampleContent} ${payload}`
       this.updateDom()
     }
   }
