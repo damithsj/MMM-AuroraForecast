@@ -30,7 +30,7 @@ Module.register("MMM-AuroraForecast", {
    */
   socketNotificationReceived: function (notification, payload) {
     if (notification === "EXAMPLE_NOTIFICATION") {
-      this.templateContent = `${this.config.exampleContent} ${payload.text}`
+      this.templateContent = '${this.config.exampleContent} ${payload.text}'
       this.updateDom()
     }
   },
