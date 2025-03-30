@@ -57,7 +57,7 @@ Module.register("MMM-AuroraForecast", {
    */
   notificationReceived(notification, payload) {
     if (notification === "TEMPLATE_RANDOM_TEXT") {
-      this.templateContent = `${this.config.exampleContent} ${payload}`
+      this.templateContent = '${this.config.exampleContent} ${payload}'
       this.updateDom()
     }
   }
