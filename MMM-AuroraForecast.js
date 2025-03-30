@@ -1,7 +1,7 @@
 Module.register("MMM-AuroraForecast", {
 
   defaults: {
-    exampleContent: ""
+    updateInterval: 0.5	
   },
 
   /**
@@ -15,10 +15,25 @@ Module.register("MMM-AuroraForecast", {
    * Pseudo-constructor for our module. Initialize stuff here.
    */
   start() {
-    this.templateContent = this.config.exampleContent
+    this.updateInterval = this.config.updateInterval*60*1000;
+	this.latitude = this.config.latitude;
+	this.longitude = this.config.longitude;
 
-    // set timeout for next random text
-    setInterval(() => this.addRandomText(), 3000)
+	if (!this.config.socketListenerOnly) {
+
+		//start data poll
+		var self = this;
+		setTimeout(function() {
+
+			//first data pull is delayed by config
+			self.getData();
+
+			setInterval(function() {
+				self.getData();
+			}, self.config.updateInterval);
+
+		}, this.config.requestDelay);		
+	}
   },
 
   /**
