@@ -233,10 +233,15 @@
   width: auto;
 }
 
+.compact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .compact-prob {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .compact-prob-value {
@@ -260,10 +265,8 @@
 
 .compact-kp {
   display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 5px;
-  margin-top: 6px;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .compact-kp-label {
