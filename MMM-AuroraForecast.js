@@ -89,8 +89,9 @@ Module.register("MMM-AuroraForecast", {
       ? `<div class="aurora-rationale dimmed">${rationale}</div>`
       : "";
 
-    // --- Today's time slot breakdown ---
-    const slotsHtml = today.slots.map(slot => {
+    // --- Today's time slot breakdown (current + future only) ---
+    const now = new Date();
+    const slotsHtml = today.slots.filter(slot => new Date(slot.timePeriodEnd) > now).map(slot => {
       const isCurrent = currentSlot && currentSlot.timePeriodStart === slot.timePeriodStart;
       const barPct = Math.round((slot.kpValue / 9) * 100);
       const stormTag = slot.geomagneticStorm
