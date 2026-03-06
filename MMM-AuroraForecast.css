@@ -226,3 +226,34 @@
   margin-top: 8px;
   letter-spacing: 0.5px;
 }
+
+/* ── Compact layout ──────────────────────────────── */
+
+.aurora-compact {
+  width: auto;
+}
+
+.compact-prob {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.compact-prob-value {
+  font-size: 44px;
+  font-weight: 100;
+  line-height: 1;
+  color: #fff;
+}
+
+.compact-prob-pct {
+  font-size: 22px;
+  margin-left: 2px;
+}
+
+.compact-location {
+  font-size: 12px;
+  margin-top: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

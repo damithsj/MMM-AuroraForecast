@@ -4,7 +4,8 @@ Module.register("MMM-AuroraForecast", {
     updateInterval: 30,   // minutes
     latitude: 0,
     longitude: 0,
-    location: "My Location"
+    location: "My Location",
+    layout: "detailed"    // "detailed" or "compact"
   },
 
   getStyles() {
@@ -45,7 +46,28 @@ Module.register("MMM-AuroraForecast", {
     return labels[g] || g;
   },
 
+  getDomCompact() {
+    const wrapper = document.createElement("div");
+    wrapper.className = "aurora-module aurora-compact";
+
+    if (!this.auroraData) {
+      wrapper.innerHTML = `<div class="aurora-loading dimmed">Loading...</div>`;
+      return wrapper;
+    }
+
+    const { auroraProb } = this.auroraData;
+    wrapper.innerHTML = `
+      <div class="compact-prob">
+        <span class="compact-prob-value">${auroraProb}<span class="compact-prob-pct">%</span></span>
+        <span class="compact-location dimmed">${this.config.location}</span>
+      </div>
+    `;
+    return wrapper;
+  },
+
   getDom() {
+    if (this.config.layout === "compact") return this.getDomCompact();
+
     const wrapper = document.createElement("div");
     wrapper.className = "aurora-module";
 
