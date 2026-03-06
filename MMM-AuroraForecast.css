@@ -257,3 +257,23 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+.compact-kp {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.compact-kp-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.compact-kp-value {
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 1;
+}

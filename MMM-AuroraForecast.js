@@ -55,11 +55,17 @@ Module.register("MMM-AuroraForecast", {
       return wrapper;
     }
 
-    const { auroraProb } = this.auroraData;
+    const { auroraProb, currentSlot, dailySummary } = this.auroraData;
+    const today = dailySummary[0];
+    const currentKp = currentSlot ? currentSlot.kpValue : today.peakKp;
     wrapper.innerHTML = `
       <div class="compact-prob">
         <span class="compact-prob-value">${auroraProb}<span class="compact-prob-pct">%</span></span>
         <span class="compact-location dimmed">${this.config.location}</span>
+      </div>
+      <div class="compact-kp">
+        <span class="compact-kp-label dimmed">Kp</span>
+        <span class="compact-kp-value" style="color:${this.kpColor(currentKp)}">${currentKp.toFixed(2)}</span>
       </div>
     `;
     return wrapper;
