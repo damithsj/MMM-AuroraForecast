@@ -1,5 +1,5 @@
 .aurora-module {
-  min-width: 300px;
+  width: 220px;
   color: #ccc;
 }
 
@@ -23,14 +23,14 @@
 }
 
 .aurora-prob-value {
-  font-size: 52px;
+  font-size: 36px;
   font-weight: 100;
   line-height: 1;
   color: #fff;
 }
 
 .aurora-prob-pct {
-  font-size: 26px;
+  font-size: 18px;
   margin-left: 2px;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .aurora-kp-value {
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 100;
   line-height: 1;
 }
@@ -192,7 +192,7 @@
 }
 
 .day-kp {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 100;
   line-height: 1;
 }
