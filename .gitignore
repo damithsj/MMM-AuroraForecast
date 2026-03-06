@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Lockfiles
+package-lock.json
+yarn.lock
+
+# Test/dev scripts
+test-*.js
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code
+.claude/

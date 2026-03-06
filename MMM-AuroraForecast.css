@@ -1,0 +1,228 @@
+.aurora-module {
+  min-width: 300px;
+  color: #ccc;
+}
+
+.aurora-loading {
+  padding: 20px;
+  text-align: center;
+}
+
+/* ── Current section ─────────────────────────────── */
+
+.aurora-current {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0 8px;
+}
+
+.aurora-prob-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.aurora-prob-value {
+  font-size: 52px;
+  font-weight: 100;
+  line-height: 1;
+  color: #fff;
+}
+
+.aurora-prob-pct {
+  font-size: 26px;
+  margin-left: 2px;
+}
+
+.aurora-location {
+  font-size: 12px;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.aurora-kp-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.aurora-kp-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+
+.aurora-kp-value {
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 1;
+}
+
+/* ── Storm badge ─────────────────────────────────── */
+
+.aurora-storm-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.aurora-storm-badge.g1 {
+  background: rgba(240, 192, 64, 0.15);
+  border: 1px solid rgba(240, 192, 64, 0.4);
+  color: #f0c040;
+}
+
+.aurora-storm-badge.g2 {
+  background: rgba(240, 112, 48, 0.15);
+  border: 1px solid rgba(240, 112, 48, 0.4);
+  color: #f07030;
+}
+
+.aurora-storm-badge.g3,
+.aurora-storm-badge.g4,
+.aurora-storm-badge.g5 {
+  background: rgba(224, 48, 32, 0.15);
+  border: 1px solid rgba(224, 48, 32, 0.4);
+  color: #e03020;
+}
+
+/* ── Rationale ───────────────────────────────────── */
+
+.aurora-rationale {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.6;
+  padding: 2px 0;
+}
+
+/* ── Divider ─────────────────────────────────────── */
+
+.aurora-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 8px 0;
+}
+
+/* ── Section headers ─────────────────────────────── */
+
+.aurora-section-header {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* ── Time slot breakdown ─────────────────────────── */
+
+.aurora-slot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.aurora-slot.current {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.slot-time {
+  width: 54px;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.slot-bar-container {
+  flex: 1;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.slot-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.slot-kp {
+  width: 38px;
+  text-align: right;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.slot-storm {
+  width: 22px;
+  font-size: 10px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* ── 3-day summary ───────────────────────────────── */
+
+.aurora-3day {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.aurora-day {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.day-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.day-kp {
+  font-size: 26px;
+  font-weight: 100;
+  line-height: 1;
+}
+
+.day-storm {
+  font-size: 10px;
+  font-weight: bold;
+  height: 14px;
+  letter-spacing: 1px;
+}
+
+.day-bar-container {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.day-bar {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+
+/* ── Footer ──────────────────────────────────────── */
+
+.aurora-issued {
+  font-size: 10px;
+  text-align: right;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
+}
