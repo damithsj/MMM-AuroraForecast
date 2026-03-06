@@ -12,6 +12,10 @@ Module.register("MMM-AuroraForecast", {
     return ["MMM-AuroraForecast.css"];
   },
 
+  getHeader() {
+    return "Aurora Forecast";
+  },
+
   start() {
     this.auroraData = null;
     this.fetchData();
