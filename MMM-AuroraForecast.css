@@ -1,5 +1,5 @@
 .aurora-module {
-  min-width: 300px;
+  width: 264px;
   color: #ccc;
 }
 
@@ -23,19 +23,19 @@
 }
 
 .aurora-prob-value {
-  font-size: 52px;
+  font-size: 44px;
   font-weight: 100;
   line-height: 1;
   color: #fff;
 }
 
 .aurora-prob-pct {
-  font-size: 26px;
+  font-size: 22px;
   margin-left: 2px;
 }
 
 .aurora-location {
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 5px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -55,7 +55,7 @@
 }
 
 .aurora-kp-value {
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 100;
   line-height: 1;
 }
@@ -66,7 +66,7 @@
   display: inline-block;
   padding: 3px 10px;
   border-radius: 3px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -96,7 +96,7 @@
 /* ── Rationale ───────────────────────────────────── */
 
 .aurora-rationale {
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
   line-height: 1.6;
   padding: 2px 0;
@@ -135,8 +135,8 @@
 }
 
 .slot-time {
-  width: 54px;
-  font-size: 11px;
+  width: 58px;
+  font-size: 14px;
   flex-shrink: 0;
 }
 
@@ -155,15 +155,15 @@
 }
 
 .slot-kp {
-  width: 38px;
+  width: 42px;
   text-align: right;
-  font-size: 12px;
+  font-size: 14px;
   flex-shrink: 0;
 }
 
 .slot-storm {
-  width: 22px;
-  font-size: 10px;
+  width: 24px;
+  font-size: 12px;
   font-weight: bold;
   flex-shrink: 0;
 }
@@ -186,21 +186,21 @@
 }
 
 .day-label {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .day-kp {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 100;
   line-height: 1;
 }
 
 .day-storm {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
-  height: 14px;
+  height: 16px;
   letter-spacing: 1px;
 }
 
@@ -225,4 +225,58 @@
   text-align: right;
   margin-top: 8px;
   letter-spacing: 0.5px;
+}
+
+/* ── Compact layout ──────────────────────────────── */
+
+.aurora-compact {
+  width: auto;
+}
+
+.compact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.compact-prob {
+  display: flex;
+  flex-direction: column;
+}
+
+.compact-prob-value {
+  font-size: 44px;
+  font-weight: 100;
+  line-height: 1;
+  color: #fff;
+}
+
+.compact-prob-pct {
+  font-size: 22px;
+  margin-left: 2px;
+}
+
+.compact-location {
+  font-size: 12px;
+  margin-top: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.compact-kp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.compact-kp-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.compact-kp-value {
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 1;
 }

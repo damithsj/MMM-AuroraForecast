@@ -4,11 +4,16 @@ Module.register("MMM-AuroraForecast", {
     updateInterval: 30,   // minutes
     latitude: 0,
     longitude: 0,
-    location: "My Location"
+    location: "My Location",
+    layout: "detailed"    // "detailed" or "compact"
   },
 
   getStyles() {
     return ["MMM-AuroraForecast.css"];
+  },
+
+  getHeader() {
+    return "Aurora Forecast";
   },
 
   start() {
@@ -45,7 +50,36 @@ Module.register("MMM-AuroraForecast", {
     return labels[g] || g;
   },
 
+  getDomCompact() {
+    const wrapper = document.createElement("div");
+    wrapper.className = "aurora-module aurora-compact";
+
+    if (!this.auroraData) {
+      wrapper.innerHTML = `<div class="aurora-loading dimmed">Loading...</div>`;
+      return wrapper;
+    }
+
+    const { auroraProb, currentSlot, dailySummary } = this.auroraData;
+    const today = dailySummary[0];
+    const currentKp = currentSlot ? currentSlot.kpValue : today.peakKp;
+    wrapper.innerHTML = `
+      <div class="compact-row">
+        <div class="compact-prob">
+          <span class="compact-prob-value">${auroraProb}<span class="compact-prob-pct">%</span></span>
+          <span class="compact-location dimmed">${this.config.location}</span>
+        </div>
+        <div class="compact-kp">
+          <span class="compact-kp-label dimmed">Kp index</span>
+          <span class="compact-kp-value" style="color:${this.kpColor(currentKp)}">${currentKp.toFixed(2)}</span>
+        </div>
+      </div>
+    `;
+    return wrapper;
+  },
+
   getDom() {
+    if (this.config.layout === "compact") return this.getDomCompact();
+
     const wrapper = document.createElement("div");
     wrapper.className = "aurora-module";
 
@@ -89,8 +123,9 @@ Module.register("MMM-AuroraForecast", {
       ? `<div class="aurora-rationale dimmed">${rationale}</div>`
       : "";
 
-    // --- Today's time slot breakdown ---
-    const slotsHtml = today.slots.map(slot => {
+    // --- Today's time slot breakdown (current + future only) ---
+    const now = new Date();
+    const slotsHtml = today.slots.filter(slot => new Date(slot.timePeriodEnd) > now).map(slot => {
       const isCurrent = currentSlot && currentSlot.timePeriodStart === slot.timePeriodStart;
       const barPct = Math.round((slot.kpValue / 9) * 100);
       const stormTag = slot.geomagneticStorm
