@@ -8,7 +8,7 @@ A [MagicMirror²](https://magicmirror.builders/) module that displays **aurora v
 
 | Detailed | Compact |
 |:---:|:---:|
-| ![Detailed layout](images/detailed.png) | ![Compact layout](images/compact.png) |
+| ![Detailed layout](images/screenshot1-detailed.png) | ![Compact layout](images/screenshot2-compact.png) |
 
 ---
 
